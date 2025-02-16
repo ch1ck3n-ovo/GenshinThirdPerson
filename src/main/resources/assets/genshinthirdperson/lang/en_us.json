@@ -1,0 +1,41 @@
+{
+  "text.autoconfig.genshinthirdperson.title": "Genshin Third Person",
+
+  "text.autoconfig.genshinthirdperson.option.alwaysShowCrosshair": "Always Show Crosshair",
+  "text.autoconfig.genshinthirdperson.option.alwaysShowCrosshair.status": "Status",
+
+  "text.autoconfig.genshinthirdperson.option.cameraBasedMovement": "Camera-Based Movement",
+  "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.status": "Status",
+  "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.alignRecoveryDelay": "Align Recovery Delay",
+  "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.alignRecoveryDelay.@Tooltip": "After mouse interaction ends, delay for a while before resuming camera-oriented movement (unit: tick, 1 tick = 1/20 second).",
+  "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.autoCharacterFade": "Auto Character Fade",
+  "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.autoCharacterFade.@Tooltip": "Automatically makes the character semi-transparent when the camera is too close to avoid obstructing the view.",
+  "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.disableWhenElytra": "Disable When Elytra",
+  "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.disableWhenElytra.@Tooltip": "Automatically disable Camera-Based Movement when flying with elytra.",
+  "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.disableWhenRiding": "Disable When Riding",
+  "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.disableWhenRiding.@Tooltip": "Automatically disable Camera-Based Movement when riding.",
+
+  "text.autoconfig.genshinthirdperson.option.disableThirdPersonFrontView": "Disable Third-Person Front View",
+  "text.autoconfig.genshinthirdperson.option.disableThirdPersonFrontView.status": "Status",
+
+
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip": "Smooth Camera Clip",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.status": "Status",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.transitionMode": "Transition Mode",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.transitionMode.@Tooltip": "The transition mode used when the camera zooms.\n - \"Linear\": Constant speed, smooth transition.\n - \"Smooth\": Slower at the beginning and end, faster in the middle, creating a natural feel.\n - \"Ease In\": Gradually accelerates, suitable for entry effects.\n - \"Ease Out\": Gradually decelerates, suitable for exit effects.\n - \"Ease In-Out\": Combines ease-in and ease-out effects for a fluid motion.\n - \"Genshin Impact(1)\" and \"Genshin Impact(2)\": Mimic Genshin Impact's camera transition style for a similar gameplay experience.",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.transitionMode.linear": "Linear",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.transitionMode.ease": "Ease",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.transitionMode.ease-in": "Ease-In",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.transitionMode.ease-out": "Ease-Out",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.transitionMode.ease-in-out": "Ease-In-Out",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.transitionMode.genshin-impact-1": "Genshin Impact(1)",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.transitionMode.genshin-impact-2": "Genshin Impact(2)",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.startDistance": "Start Distance",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.startDistance.@Tooltip": "The initial distance for camera zoom (unit: 0.01 blocks).",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.transitionTime": "Transition Time",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.transitionTime.@Tooltip": "The transition duration for camera zoom (unit: tick, 1 tick = 1/20 second).",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.rotationSpeed": "Rotation Speed",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.rotationSpeed.@Tooltip": "Adjust the camera or character rotation speed to make the rotation smoother.",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.applyToMobs": "Apply To Mobs",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.applyToMobs.@Tooltip": "Whether to enable this feature for mob perspectives (non-player characters)."
+}

@@ -1,0 +1,18 @@
+{
+  "required": true,
+  "package": "tw.ch1ck3n.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "refmap": "genshinthirdperson.refmap.json",
+  "client": [
+    "CameraMixin",
+    "EntityMixin",
+    "InGameHudMixin",
+    "KeyboardInputMixin",
+    "LivingEntityRendererMixin",
+    "MouseMixin",
+    "PerspectiveMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "text.autoconfig.genshinthirdperson.title": "原神第三人稱",
+
+  "text.autoconfig.genshinthirdperson.option.alwaysShowCrosshair": "總是顯示準星",
+  "text.autoconfig.genshinthirdperson.option.alwaysShowCrosshair.status": "狀態",
+
+  "text.autoconfig.genshinthirdperson.option.cameraBasedMovement": "鏡頭導向移動",
+  "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.status": "狀態",
+  "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.alignRecoveryDelay": "互動恢復延遲",
+  "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.alignRecoveryDelay.@Tooltip": "滑鼠交互結束後，延遲一段時間再恢復鏡頭導向移動（單位：tick，1 tick = 1/20 秒）。",
+  "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.autoCharacterFade": "角色虛化效果",
+  "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.autoCharacterFade.@Tooltip": "當鏡頭距離過近時，自動使角色變為半透明，以避免遮擋視野。",
+  "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.disableWhenElytra": "鞘翅飛行時禁用",
+  "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.disableWhenElytra.@Tooltip": "當鞘翅飛行時，自動禁用鏡頭導向移動。",
+  "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.disableWhenRiding": "騎乘載具時禁用",
+  "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.disableWhenRiding.@Tooltip": "當騎乘載具時，自動禁用鏡頭導向移動。",
+
+  "text.autoconfig.genshinthirdperson.option.disableThirdPersonFrontView": "禁用第三人稱前視角",
+  "text.autoconfig.genshinthirdperson.option.disableThirdPersonFrontView.status": "狀態",
+
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip": "平滑鏡頭縮放",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.status": "狀態",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.transitionMode": "過渡模式",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.transitionMode.@Tooltip": "鏡頭縮放時使用的過渡模式。\n - \"線性\": 速度恒定，平滑過渡。\n - \"平滑\": 開頭和結尾較慢，中間較快，帶來自然的感覺。\n - \"淡入\": 逐漸加速，適合進場效果。\n - \"淡出\": 逐漸減速，適合退場效果。\n - \"淡入淡出\": 結合淡入與淡出效果，提供流暢的動作。\n - \"原神(1)\" 和 \"原神(2)\": 模仿原神的相機過渡風格，帶來類似的遊戲體驗。",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.transitionMode.linear": "線性",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.transitionMode.ease": "平滑",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.transitionMode.ease-in": "淡入",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.transitionMode.ease-out": "淡出",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.transitionMode.ease-in-out": "淡入淡出",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.transitionMode.genshin-impact-1": "原神(1)",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.transitionMode.genshin-impact-2": "原神(2)",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.startDistance": "起始距離",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.startDistance.@Tooltip": "鏡頭縮放的起始距離（單位為 0.01 格）",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.transitionTime": "過渡時間",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.transitionTime.@Tooltip": "鏡頭縮放的過渡時間（單位為 tick，1 tick = 1/20 秒）",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.rotationSpeed": "視角旋轉速度",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.rotationSpeed.@Tooltip": "調整視角或角色旋轉的速度，使旋轉更加流暢。",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.applyToMobs": "生物視角",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.applyToMobs.@Tooltip": "是否對生物視角（非玩家角色）啟用該功能。"
+}
