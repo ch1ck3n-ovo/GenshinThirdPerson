@@ -37,7 +37,7 @@ This mod provides various settings via **Mod Menu**.
 ## 🛠 Compatibility
 - **Minecraft**: 1.21+
 - **Fabric API Required**
-- **Not Compatible with Sodium**: May not function properly.
+- **Not Compatible with all mods**: For example: Sodium, Iris Shader, etc.
 - **Other Mods**: May conflict with other camera movement mods.
 
 ## 🚀 Future Plans
