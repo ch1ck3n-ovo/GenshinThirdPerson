@@ -6,11 +6,10 @@ A **Minecraft Fabric mod** that enhances third-person movement by introducing **
 
 ## 🌟 Features
 - **Camera-Based Movement**: Move in the direction the camera is facing, rather than character-based movement.
-- **Smooth Camera Clipping**: When the camera is obstructed by blocks, it will smoothly zoom in.
+- **Smooth Camera Clip**: When the camera is obstructed by blocks, it will smoothly zoom in.
 - **Auto Character Fade**: When the camera is too close, the character will become transparent to avoid obstructing the view.
 - **Configurable Interaction Recovery Delay**: After interacting with objects, movement direction remains aligned with the camera for a short period.
 - **Customizable Transition Effects**: Choose between linear, smooth, ease-in, ease-out, and Genshin-like transitions.
-- **Supports Mob Perspective**: The third-person perspective is also applied when controlling non-player entities.
 
 ## 🎥 Demonstration
 ### Camera-Based Movement
@@ -37,11 +36,11 @@ This mod provides various settings via **Mod Menu**.
 ## 🛠 Compatibility
 - **Minecraft**: 1.21+
 - **Fabric API Required**
-- **Not Compatible with all mods**: For example: Sodium, Iris Shader, etc.
+- **Not Compatible With All Mods**: For example: Sodium, Iris Shader, etc.
 - **Other Mods**: May conflict with other camera movement mods.
 
 ## 🚀 Future Plans
-- Support for Forge & Quilt
+- Make its camera more like Genshin Impact
 - More customizable transition effects
 - Multiplayer improvements
 
