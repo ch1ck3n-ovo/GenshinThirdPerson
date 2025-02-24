@@ -13,13 +13,13 @@ A **Minecraft Fabric mod** that enhances third-person movement by introducing **
 
 ## 🎥 Demonstration
 ### Camera-Based Movement
-![Camera-Based Movement]([https://yourgifurl.com/camera_based_movement.gif](https://github.com/ch1ck3n-ovo/GenshinThirdPerson/blob/main/gif/SmoothCameraClip.gif))
+![Camera-Based Movement](assets/CameraBasedMovement.gif)
 
 ### Smooth Camera Clip
-![Smooth Camera Clip]([https://yourgifurl.com/smooth_camera_clip.gif](https://github.com/ch1ck3n-ovo/GenshinThirdPerson/blob/main/gif/CameraBasedMovement.gif))
+![Smooth Camera Clip](assets/SmoothCameraClip.gif)
 
 ### Character Auto-Fade
-![Character Auto-Fade]([https://yourgifurl.com/character_fade.gif](https://github.com/ch1ck3n-ovo/GenshinThirdPerson/blob/main/gif/AutoCharacterFade.gif))
+![Character Auto-Fade](assets/AutoCharacterFade.gif)
 
 ## 📥 Installation
 1. **Download & Install Fabric**: Ensure you have [Fabric Loader](https://fabricmc.net/use/) installed.
