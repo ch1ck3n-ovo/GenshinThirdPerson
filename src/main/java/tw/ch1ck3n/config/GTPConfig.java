@@ -9,7 +9,7 @@ import tw.ch1ck3n.util.CubicBezier;
 @Config(name = GenshinThirdPerson.MOD_ID)
 public class GTPConfig implements ConfigData {
 
-    // TODO: refmap (X)
+    // TODO: fix autoCharacterFade do thing whether mother mod is enabled or not
 
     @ConfigEntry.Gui.CollapsibleObject
     public AlwaysShowCrosshair alwaysShowCrosshair = new AlwaysShowCrosshair();
@@ -35,9 +35,6 @@ public class GTPConfig implements ConfigData {
         @ConfigEntry.BoundedDiscrete(min = 0L, max = 100L)
         @ConfigEntry.Gui.Tooltip
         public long alignRecoveryDelay = 20L;
-
-        @ConfigEntry.Gui.Tooltip
-        public boolean autoCharacterFade = true;
 
         @ConfigEntry.Gui.Tooltip
         public boolean disableWhenElytra = true;
@@ -70,6 +67,9 @@ public class GTPConfig implements ConfigData {
         @ConfigEntry.BoundedDiscrete(min = 0L, max = 100L)
         @ConfigEntry.Gui.Tooltip
         public long rotationSpeed = 30L;
+
+        @ConfigEntry.Gui.Tooltip
+        public boolean autoCharacterFade = true;
 
         @ConfigEntry.Gui.Tooltip
         public boolean applyToMobs = true;

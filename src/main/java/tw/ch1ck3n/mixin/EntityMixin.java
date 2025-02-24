@@ -42,6 +42,7 @@ public abstract class EntityMixin {
 			camera.setRotation(this.getYaw(), this.getPitch());
 		}
 
+		this.setPitch(MathHelper.clamp(this.getPitch(), -90.0F, 90.0F));
 		this.prevPitch += f;
 		this.prevYaw += g;
 		this.prevPitch = MathHelper.clamp(this.prevPitch, -90.0F, 90.0F);

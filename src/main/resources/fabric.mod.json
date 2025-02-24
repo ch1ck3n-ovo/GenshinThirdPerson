@@ -8,10 +8,10 @@
 		"ch1ck3n-ovo"
 	],
 	"contact": {
-		"homepage": "",
-		"sources": ""
+		"homepage": "https://modrinth.com/mod/genshinthirdperson",
+		"sources": "https://github.com/ch1ck3n-ovo/GenshinThirdPerson"
 	},
-	"license": "CC0-1.0",
+	"license": "GPL-3.0",
 	"icon": "assets/genshinthirdperson/icon.png",
 	"environment": "client",
 	"entrypoints": {

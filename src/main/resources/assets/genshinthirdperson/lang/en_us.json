@@ -8,8 +8,6 @@
   "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.status": "Status",
   "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.alignRecoveryDelay": "Align Recovery Delay",
   "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.alignRecoveryDelay.@Tooltip": "After mouse interaction ends, delay for a while before resuming camera-oriented movement (unit: tick, 1 tick = 1/20 second).",
-  "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.autoCharacterFade": "Auto Character Fade",
-  "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.autoCharacterFade.@Tooltip": "Automatically makes the character semi-transparent when the camera is too close to avoid obstructing the view.",
   "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.disableWhenElytra": "Disable When Elytra",
   "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.disableWhenElytra.@Tooltip": "Automatically disable Camera-Based Movement when flying with elytra.",
   "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.disableWhenRiding": "Disable When Riding",
@@ -36,6 +34,8 @@
   "text.autoconfig.genshinthirdperson.option.smoothCameraClip.transitionTime.@Tooltip": "The transition duration for camera zoom (unit: tick, 1 tick = 1/20 second).",
   "text.autoconfig.genshinthirdperson.option.smoothCameraClip.rotationSpeed": "Rotation Speed",
   "text.autoconfig.genshinthirdperson.option.smoothCameraClip.rotationSpeed.@Tooltip": "Adjust the camera or character rotation speed to make the rotation smoother.",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.autoCharacterFade": "Auto Character Fade",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.autoCharacterFade.@Tooltip": "Automatically makes the character semi-transparent when the camera is too close to avoid obstructing the view.",
   "text.autoconfig.genshinthirdperson.option.smoothCameraClip.applyToMobs": "Apply To Mobs",
   "text.autoconfig.genshinthirdperson.option.smoothCameraClip.applyToMobs.@Tooltip": "Whether to enable this feature for mob perspectives (non-player characters)."
 }

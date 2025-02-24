@@ -8,8 +8,6 @@
   "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.status": "狀態",
   "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.alignRecoveryDelay": "互動恢復延遲",
   "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.alignRecoveryDelay.@Tooltip": "滑鼠交互結束後，延遲一段時間再恢復鏡頭導向移動（單位：tick，1 tick = 1/20 秒）。",
-  "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.autoCharacterFade": "角色虛化效果",
-  "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.autoCharacterFade.@Tooltip": "當鏡頭距離過近時，自動使角色變為半透明，以避免遮擋視野。",
   "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.disableWhenElytra": "鞘翅飛行時禁用",
   "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.disableWhenElytra.@Tooltip": "當鞘翅飛行時，自動禁用鏡頭導向移動。",
   "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.disableWhenRiding": "騎乘載具時禁用",
@@ -35,6 +33,8 @@
   "text.autoconfig.genshinthirdperson.option.smoothCameraClip.transitionTime.@Tooltip": "鏡頭縮放的過渡時間（單位為 tick，1 tick = 1/20 秒）",
   "text.autoconfig.genshinthirdperson.option.smoothCameraClip.rotationSpeed": "視角旋轉速度",
   "text.autoconfig.genshinthirdperson.option.smoothCameraClip.rotationSpeed.@Tooltip": "調整視角或角色旋轉的速度，使旋轉更加流暢。",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.autoCharacterFade": "角色虛化效果",
+  "text.autoconfig.genshinthirdperson.option.smoothCameraClip.autoCharacterFade.@Tooltip": "當鏡頭距離過近時，自動使角色變為半透明，以避免遮擋視野。",
   "text.autoconfig.genshinthirdperson.option.smoothCameraClip.applyToMobs": "生物視角",
   "text.autoconfig.genshinthirdperson.option.smoothCameraClip.applyToMobs.@Tooltip": "是否對生物視角（非玩家角色）啟用該功能。"
 }
