@@ -1,7 +1,5 @@
 # GenshinThirdPerson
 
-![Mod Showcase](https://yourgifurl.com/showcase.gif)
-
 A **Minecraft Fabric mod** that enhances third-person movement by introducing **Genshin Impact-style camera-based movement**. This mod allows for a smoother, more immersive third-person experience.
 
 ## 🌟 Features
