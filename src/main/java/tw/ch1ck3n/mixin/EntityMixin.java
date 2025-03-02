@@ -25,7 +25,7 @@ public abstract class EntityMixin {
 
 	@Shadow
 	protected abstract void setRotation(float yaw, float pitch);
-	
+
 	@Inject(method = "changeLookDirection", at = @At(value = "HEAD"), cancellable = true)
 	public void changeLookDirection(double cursorDeltaX, double cursorDeltaY, CallbackInfo ci) {
 		float f = (float)cursorDeltaY * 0.15F;
