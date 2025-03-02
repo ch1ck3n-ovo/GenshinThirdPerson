@@ -24,10 +24,36 @@ A **Minecraft Fabric mod** that enhances third-person movement by introducing **
 - **Genshin-Like**: Genshin Impact(1), Genshin Impact(2)
 
 # ⚙️ Configuration
-This mod provides various settings via **Mod Menu**.
-- **Enable/Disable Features**
-- **Adjust Transition Speed & Camera Effects**
-- **Customize Third-Person Camera Behavior**
+This mod provides various settings via **Mod Menu**.  
+<details>  
+<summary>Click to expand.</summary>
+  
+```
+{
+	"alwaysShowCrosshair": {
+		"status": true
+	},
+	"cameraBasedMovement": {
+		"status": true,
+		"alignRecoveryDelay": 20,
+		"disableWhenElytra": true,
+		"disableWhenRiding": true
+	},
+	"disableThirdPersonFrontView": {
+		"status": true
+	},
+	"smoothCameraClip": {
+		"status": true,
+		"transitionMode": "LINEAR",
+		"startDistance": 26,
+		"transitionTime": 20,
+		"rotationSpeed": 30,
+		"autoCharacterFade": true,
+		"applyToMobs": true
+	}
+}
+```
+</details>
 
 # 📥 Installation
 1. **Download & Install Fabric**: Ensure you have [Fabric Loader](https://fabricmc.net/use/) installed.
