@@ -4,13 +4,13 @@
 	"version": "${version}",
 	"name": "GenshinThirdPerson",
 	"description": "We are focused on developing a Minecraft mod that simulates the camera effects of Genshin Impact",
-	"authors": [
-		"ch1ck3n-ovo"
-	],
 	"contact": {
 		"homepage": "https://modrinth.com/mod/genshinthirdperson",
 		"sources": "https://github.com/ch1ck3n-ovo/GenshinThirdPerson"
 	},
+	"authors": [
+		"ch1ck3n-ovo"
+	],
 	"license": "GPL-3.0",
 	"icon": "assets/genshinthirdperson/icon.png",
 	"environment": "client",
@@ -26,11 +26,13 @@
 		"genshinthirdperson.mixins.json"
 	],
 	"depends": {
-		"cloth-config": ">=17.0.144-fabric",
+		"cloth-config": ">=17.0.142-fabric",
 		"fabric-api": "*",
 		"fabricloader": ">=0.16.10",
 		"java": ">=21",
-		"minecraft": "~1.21.4",
-		"modmenu": ">=13.0.1"
+		"minecraft": "~1.21.4"
+	},
+	"suggests": {
+		"modmenu": ">=13.0.0"
 	}
 }

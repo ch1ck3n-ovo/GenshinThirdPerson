@@ -1,11 +1,13 @@
 package tw.ch1ck3n.camera;
 
+import lombok.Getter;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.MathHelper;
 import tw.ch1ck3n.GenshinThirdPerson;
 import tw.ch1ck3n.config.GTPConfig;
 import tw.ch1ck3n.util.CubicBezier;
 
+@Getter
 public class GenshinCamera {
 
     private final GenshinThirdPerson instance;
@@ -110,41 +112,5 @@ public class GenshinCamera {
             player.setYaw(prevYaw + yawDiff);
             this.lastInteractionTimeMillis = System.currentTimeMillis();
         }
-    }
-
-    public float getPitch() {
-        return this.pitch;
-    }
-
-    public float getYaw() {
-        return this.yaw;
-    }
-
-    public boolean isThirdPerson() {
-        return this.thirdPerson;
-    }
-
-    public long getElapsedTimeMillis() {
-        return this.elapsedTimeMillis;
-    }
-
-    public long getLastCameraUpdateTimeMillis() {
-        return this.lastCameraUpdateTimeMillis;
-    }
-
-    public long getLastInteractionTimeMillis() {
-        return this.lastInteractionTimeMillis;
-    }
-
-    public float getCurrentCameraDistance() {
-        return this.currentCameraDistance;
-    }
-
-    public float getMaxAllowedCameraDistance() {
-        return this.maxAllowedCameraDistance;
-    }
-
-    public float getTickDelta() {
-        return this.tickDelta;
     }
 }

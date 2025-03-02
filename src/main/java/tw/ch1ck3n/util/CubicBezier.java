@@ -46,11 +46,9 @@ public class CubicBezier {
         while (t1 - t0 > epsilon) { // 誤差小於 epsilon 時停止
             float Y = getYFromT(t, p0, p1, p2, p3); // 計算當前 t 對應的 y
 
-            if (Y < y) {
-                t0 = t; // y 太小，往右找
-            } else {
-                t1 = t; // y 太大，往左找
-            }
+            if (Y < y) t0 = t; // y 太小，往右找
+            else t1 = t; // y 太大，往左找
+
             t = (t0 + t1) / 2.0F; // 取中間值繼續搜尋
         }
         return t; // 返回找到的 t

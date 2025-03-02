@@ -5,6 +5,9 @@ import net.minecraft.util.math.MathHelper;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import tw.ch1ck3n.GenshinThirdPerson;
 import tw.ch1ck3n.camera.GenshinCamera;
 
@@ -22,13 +25,9 @@ public abstract class EntityMixin {
 
 	@Shadow
 	protected abstract void setRotation(float yaw, float pitch);
-
-	/**
-	 * @author ch1ck3n-ovo
-	 * @reason Camera-based movement.
-	 */
-	@Overwrite
-	public void changeLookDirection(double cursorDeltaX, double cursorDeltaY) {
+	
+	@Inject(method = "changeLookDirection", at = @At(value = "HEAD"), cancellable = true)
+	public void changeLookDirection(double cursorDeltaX, double cursorDeltaY, CallbackInfo ci) {
 		float f = (float)cursorDeltaY * 0.15F;
 		float g = (float)cursorDeltaX * 0.15F;
 
@@ -49,6 +48,7 @@ public abstract class EntityMixin {
 		if (this.vehicle != null) {
 			this.vehicle.onPassengerLookAround((Entity) (Object) this);
 		}
+		ci.cancel();
 	}
 
 	@Shadow

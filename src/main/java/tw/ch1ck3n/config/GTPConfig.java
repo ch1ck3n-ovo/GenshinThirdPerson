@@ -18,7 +18,7 @@ public class GTPConfig implements ConfigData {
     public CameraBasedMovement cameraBasedMovement = new CameraBasedMovement();
 
     @ConfigEntry.Gui.CollapsibleObject
-    public DisableThirdPersonFrontView disableThirdPersonFrontView = new DisableThirdPersonFrontView();
+        public DisableThirdPersonFrontView disableThirdPersonFrontView = new DisableThirdPersonFrontView();
 
     @ConfigEntry.Gui.CollapsibleObject
     public SmoothCameraClip smoothCameraClip = new SmoothCameraClip();
