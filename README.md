@@ -1,6 +1,6 @@
 # ⛏️ Minecraft Fabric Mod
-### [**> Join Discord <**](https://discord.gg/xHubQfKJPv)
-A **Minecraft Fabric mod** that enhances third-person movement by introducing **Genshin Impact-style camera-based movement**. This mod allows for a smoother, more immersive third-person experience.
+### [**> Join Discord <**](https://discord.gg/xHubQfKJPv)  
+A **Minecraft Fabric mod** that enhances third-person movement by introducing **Genshin Impact-style camera-based movement**. This mod allows for a smoother, more immersive third-person experience.  
 
 # 🎥 Demonstration
 ### Camera-Based Movement
@@ -24,10 +24,10 @@ A **Minecraft Fabric mod** that enhances third-person movement by introducing **
 - **Genshin-Like**: Genshin Impact(1), Genshin Impact(2)
 
 # ⚙️ Configuration
-This mod provides various settings via **Mod Menu**.
+This mod provides various settings via **Mod Menu**.  
 <details>  
 <summary>Click to expand.</summary>
-
+  
 ```
 {
 	"alwaysShowCrosshair": {
@@ -78,3 +78,4 @@ This mod is licensed under [**GPL-3.0 License**](https://github.com/ch1ck3n-ovo/
 
 ---
 *Enjoy a smoother and more immersive third-person experience in Minecraft!*
+
