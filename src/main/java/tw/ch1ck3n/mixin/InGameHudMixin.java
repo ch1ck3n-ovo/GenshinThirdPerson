@@ -25,7 +25,7 @@ public class InGameHudMixin {
         GenshinThirdPerson instance = GenshinThirdPerson.getInstance();
         if (instance.getCamera().isThirdPerson() && instance.getConfig().alwaysShowCrosshair.status) {
             context.drawGuiTexture(
-                    RenderLayer::getCrosshair, CROSSHAIR_TEXTURE,
+                    CROSSHAIR_TEXTURE,
                     (context.getScaledWindowWidth() - 15) / 2,
                     (context.getScaledWindowHeight() - 15) / 2,
                     15, 15

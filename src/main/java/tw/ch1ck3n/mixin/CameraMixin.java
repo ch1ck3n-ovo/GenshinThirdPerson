@@ -26,14 +26,14 @@ public class CameraMixin {
 		camera.update(thirdPerson, tickDelta);
 	}
 
-	@ModifyArg(method = "update", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/Camera;setRotation(FF)V", ordinal = 1), index = 0)
+	@ModifyArg(method = "update", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/Camera;setRotation(FF)V", ordinal = 0), index = 0)
 	private float modifyYaw(float yaw)  {
 		GenshinCamera camera = GenshinThirdPerson.getInstance().getCamera();
 		if (GenshinThirdPerson.getInstance().getConfig().cameraBasedMovement.status && camera.isThirdPerson()) return camera.getYaw();
 		return yaw;
 	}
 
-	@ModifyArg(method = "update", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/Camera;setRotation(FF)V", ordinal = 1), index = 1)
+	@ModifyArg(method = "update", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/Camera;setRotation(FF)V", ordinal = 0), index = 1)
 	private float modifyPitch(float pitch) {
 		GenshinCamera camera = GenshinThirdPerson.getInstance().getCamera();
 		if (GenshinThirdPerson.getInstance().getConfig().cameraBasedMovement.status && camera.isThirdPerson()) return camera.getPitch();

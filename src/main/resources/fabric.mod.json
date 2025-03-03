@@ -26,13 +26,13 @@
 		"genshinthirdperson.mixins.json"
 	],
 	"depends": {
-		"cloth-config": ">=17.0.142-fabric",
+		"cloth-config": ">=15.0.130-fabric",
 		"fabric-api": "*",
 		"fabricloader": ">=0.16.10",
 		"java": ">=21",
-		"minecraft": "~1.21.4"
+		"minecraft": ">=1.21.1-"
 	},
 	"suggests": {
-		"modmenu": ">=13.0.0"
+		"modmenu": ">=11.0.1"
 	}
 }
