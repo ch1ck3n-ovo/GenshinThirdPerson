@@ -37,20 +37,7 @@ public abstract class LivingEntityRendererMixin<T extends LivingEntity, M extend
                 !GenshinThirdPerson.getInstance().getConfig().smoothCameraClip.autoCharacterFade) return l;
         GenshinCamera camera = GenshinThirdPerson.getInstance().getCamera();
         if (this.model instanceof PlayerEntityModel && camera.isThirdPerson())
-            return mix(ColorUtil.rgbaToInt(255, 255, 255, ColorUtil.getAlpha(camera.getMaxAllowedCameraDistance())), -1);
+            return ColorUtil.rgbaToInt(255, 255, 255, ColorUtil.getAlpha(camera.getMaxAllowedCameraDistance()));
         return l;
-    }
-
-    @Unique
-    private int mix(int first, int second) {
-        if (first == -1) {
-            return second;
-        } else {
-            return second == -1 ? first : ColorHelper.Abgr.getAbgr(
-                    ColorHelper.Abgr.getAlpha(first) * ColorHelper.Abgr.getAlpha(second) / 255,
-                    ColorHelper.Abgr.getBlue(first) * ColorHelper.Abgr.getBlue(second) / 255,
-                    ColorHelper.Abgr.getGreen(first) * ColorHelper.Abgr.getGreen(second) / 255,
-                    ColorHelper.Abgr.getRed(first) * ColorHelper.Abgr.getRed(second) / 255);
-        }
     }
 }
