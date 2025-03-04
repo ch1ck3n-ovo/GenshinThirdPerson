@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "tw.ch1ck3n.mixin",
+  "package": "tw.ch1ck3n.genshinthirdperson.mixin",
   "compatibilityLevel": "JAVA_21",
   "refmap": "genshinthirdperson.refmap.json",
   "client": [

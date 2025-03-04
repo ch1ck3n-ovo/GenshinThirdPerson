@@ -1,4 +1,4 @@
-# ⛏️ Minecraft Fabric Mod
+# ⛏️ Genshin Third Person
 ### <center>[**> Join Discord <**](https://discord.gg/xHubQfKJPv)</center>  
 A **Minecraft Fabric mod** that enhances third-person movement by introducing **Genshin Impact-style camera-based movement**. This mod allows for a smoother, more immersive third-person experience.  
 
