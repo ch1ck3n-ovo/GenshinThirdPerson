@@ -1,10 +1,10 @@
-package tw.ch1ck3n.config;
+package tw.ch1ck3n.genshinthirdperson.config;
 
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
-import tw.ch1ck3n.GenshinThirdPerson;
-import tw.ch1ck3n.util.CubicBezier;
+import tw.ch1ck3n.genshinthirdperson.GenshinThirdPerson;
+import tw.ch1ck3n.genshinthirdperson.util.CubicBezier;
 
 @Config(name = GenshinThirdPerson.MOD_ID)
 public class GTPConfig implements ConfigData {

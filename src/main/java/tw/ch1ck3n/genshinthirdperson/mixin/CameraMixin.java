@@ -1,4 +1,4 @@
-package tw.ch1ck3n.mixin;
+package tw.ch1ck3n.genshinthirdperson.mixin;
 
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.render.Camera;
@@ -11,8 +11,8 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import tw.ch1ck3n.GenshinThirdPerson;
-import tw.ch1ck3n.camera.GenshinCamera;
+import tw.ch1ck3n.genshinthirdperson.GenshinThirdPerson;
+import tw.ch1ck3n.genshinthirdperson.camera.GenshinCamera;
 
 @Mixin(Camera.class)
 public class CameraMixin {
@@ -41,8 +41,8 @@ public class CameraMixin {
 	}
 
 	@Inject(method = "clipToSpace", at = @At("RETURN"), cancellable = true)
-	private void injectClipToSpace(float f, CallbackInfoReturnable<Float> cir) {
+	private void injectClipToSpace(double desiredCameraDistance, CallbackInfoReturnable<Double> cir) {
 		GenshinCamera camera = GenshinThirdPerson.getInstance().getCamera();
-		cir.setReturnValue(camera.getClipDistance(f, focusedEntity instanceof ClientPlayerEntity));
+		cir.setReturnValue(camera.getClipDistance(desiredCameraDistance, focusedEntity instanceof ClientPlayerEntity));
 	}
 }

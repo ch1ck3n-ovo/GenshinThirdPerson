@@ -16,23 +16,23 @@
 	"environment": "client",
 	"entrypoints": {
 		"main": [
-			"tw.ch1ck3n.GenshinThirdPerson"
+          "tw.ch1ck3n.genshinthirdperson.GenshinThirdPerson"
 		],
 		"modmenu": [
-			"tw.ch1ck3n.config.ModMenuIntegration"
+			"tw.ch1ck3n.genshinthirdperson.config.ModMenuIntegration"
 		]
 	},
 	"mixins": [
 		"genshinthirdperson.mixins.json"
 	],
 	"depends": {
-		"cloth-config": ">=15.0.130-fabric",
+		"cloth-config": ">=11.0.99-fabric",
 		"fabric-api": "*",
 		"fabricloader": ">=0.16.10",
-		"java": ">=21",
-		"minecraft": ">=1.21.1-"
+		"java": ">=17",
+		"minecraft": ">=1.20.1-"
 	},
 	"suggests": {
-		"modmenu": ">=11.0.1"
+		"modmenu": ">=7.0.1"
 	}
 }

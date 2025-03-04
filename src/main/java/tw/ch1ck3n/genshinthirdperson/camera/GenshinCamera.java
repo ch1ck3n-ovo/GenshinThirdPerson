@@ -1,11 +1,11 @@
-package tw.ch1ck3n.camera;
+package tw.ch1ck3n.genshinthirdperson.camera;
 
 import lombok.Getter;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.MathHelper;
-import tw.ch1ck3n.GenshinThirdPerson;
-import tw.ch1ck3n.config.GTPConfig;
-import tw.ch1ck3n.util.CubicBezier;
+import tw.ch1ck3n.genshinthirdperson.GenshinThirdPerson;
+import tw.ch1ck3n.genshinthirdperson.config.GTPConfig;
+import tw.ch1ck3n.genshinthirdperson.util.CubicBezier;
 
 @Getter
 public class GenshinCamera {
@@ -22,8 +22,8 @@ public class GenshinCamera {
     private long elapsedTimeMillis;
     private long lastCameraUpdateTimeMillis;
     private long lastInteractionTimeMillis;
-    private float currentCameraDistance;
-    private float maxAllowedCameraDistance;
+    private double currentCameraDistance;
+    private double maxAllowedCameraDistance;
     private float tickDelta;
 
     /** CameraMixin.class */
@@ -37,7 +37,7 @@ public class GenshinCamera {
         }
     }
 
-    public float getClipDistance(float f, boolean isPlayer) {
+    public double getClipDistance(double f, boolean isPlayer) {
         maxAllowedCameraDistance = f;
         GTPConfig.SmoothCameraClip smoothCameraClip = instance.getConfig().smoothCameraClip;
         if ((!smoothCameraClip.status) || (!smoothCameraClip.applyToMobs && !isPlayer)) return f;
@@ -48,17 +48,17 @@ public class GenshinCamera {
 
         // limit，不同的f會有不同的limit
         // 用y推t，0<=t<=1
-        float y1 = (f - initialDistance) / (4.0F - initialDistance);
+        double y1 = (f - initialDistance) / (4.0F - initialDistance);
         y1 = Math.min(1, Math.max(y1, 0));
-        float t1 = CubicBezier.getTFromY(y1, mode, 0.0001F);
+        double t1 = CubicBezier.getTFromY(y1, mode, 0.0001F);
 
         long millisLimit = (long) (duration * t1 * 50L);
         elapsedTimeMillis = Math.min(millisLimit + 1, elapsedTimeMillis);
 
         // Cubic-Bezier
         // 用t推y，0<=y<=1
-        float t2 = Math.min(1.0F, elapsedTimeMillis / (duration * 50.0F));
-        float y2 = CubicBezier.getYFromT(t2, 0, mode.y1, mode.y2, 1);
+        double t2 = Math.min(1.0F, elapsedTimeMillis / (duration * 50.0F));
+        double y2 = CubicBezier.getYFromT(t2, 0, mode.y1, mode.y2, 1);
 
         // 確保鏡頭距離不大於f
         currentCameraDistance = Math.min(f, initialDistance + (4 - initialDistance) * y2);

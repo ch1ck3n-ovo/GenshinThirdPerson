@@ -1,7 +1,7 @@
 {
   "required": true,
-  "package": "tw.ch1ck3n.mixin",
-  "compatibilityLevel": "JAVA_21",
+  "package": "tw.ch1ck3n.genshinthirdperson.mixin",
+  "compatibilityLevel": "JAVA_17",
   "refmap": "genshinthirdperson.refmap.json",
   "client": [
     "CameraMixin",

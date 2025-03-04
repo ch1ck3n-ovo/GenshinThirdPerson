@@ -1,4 +1,4 @@
-package tw.ch1ck3n.mixin;
+package tw.ch1ck3n.genshinthirdperson.mixin;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.MathHelper;
@@ -7,8 +7,8 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import tw.ch1ck3n.GenshinThirdPerson;
-import tw.ch1ck3n.camera.GenshinCamera;
+import tw.ch1ck3n.genshinthirdperson.GenshinThirdPerson;
+import tw.ch1ck3n.genshinthirdperson.camera.GenshinCamera;
 
 @Mixin(Entity.class)
 public abstract class EntityMixin {

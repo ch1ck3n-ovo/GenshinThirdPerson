@@ -1,4 +1,4 @@
-package tw.ch1ck3n.util;
+package tw.ch1ck3n.genshinthirdperson.util;
 
 public class CubicBezier {
 
@@ -12,14 +12,14 @@ public class CubicBezier {
      * @param epsilon 誤差容忍度，決定精度
      * @return        對應 x 值的 t 參數（0 ~ 1）
      */
-    public static float getTFromX(float x, float x1, float x2, float epsilon) {
-        float t = x; // 初始猜測值
+    public static double getTFromX(double x, double x1, double x2, double epsilon) {
+        double t = x; // 初始猜測值
         for (int i = 0; i < 10; i++) { // 最多迭代 10 次，提升精度
-            float fx = getYFromT(t, 0, x1, x2, 1) - x; // 計算誤差
+            double fx = getYFromT(t, 0, x1, x2, 1) - x; // 計算誤差
             if (Math.abs(fx) < epsilon) return t; // 誤差足夠小，直接返回 t
 
             // 計算導數，避免除以 0
-            float dfx = 3 * (1 - t) * (1 - t) * (x1 - 0) +
+            double dfx = 3 * (1 - t) * (1 - t) * (x1 - 0) +
                     6 * (1 - t) * t * (x2 - x1) +
                     3 * t * t * (1 - x2);
 
@@ -40,11 +40,11 @@ public class CubicBezier {
      * @param epsilon   誤差容忍度
      * @return          對應 y 值的 t 參數
      */
-    public static float getTFromY(float y, float p0, float p1, float p2, float p3, float epsilon) {
-        float t0 = 0.0F, t1 = 1.0F, t = 0.5F; // 初始區間 [0, 1]
+    public static double getTFromY(double y, double p0, double p1, double p2, double p3, double epsilon) {
+        double t0 = 0.0F, t1 = 1.0F, t = 0.5F; // 初始區間 [0, 1]
 
         while (t1 - t0 > epsilon) { // 誤差小於 epsilon 時停止
-            float Y = getYFromT(t, p0, p1, p2, p3); // 計算當前 t 對應的 y
+            double Y = getYFromT(t, p0, p1, p2, p3); // 計算當前 t 對應的 y
 
             if (Y < y) t0 = t; // y 太小，往右找
             else t1 = t; // y 太大，往左找
@@ -62,7 +62,7 @@ public class CubicBezier {
      * @param epsilon 誤差容忍度
      * @return        對應 y 值的 t 參數
      */
-    public static float getTFromY(float y, TransitionMode mode, float epsilon) {
+    public static double getTFromY(double y, TransitionMode mode, double epsilon) {
         return getTFromY(y, 0, mode.y1, mode.y2, 1, epsilon);
     }
 
@@ -76,8 +76,8 @@ public class CubicBezier {
      * @param p3  終點的 x 座標
      * @return    B(t) 對應的座標值
      */
-    public static float getBFromT(float t, float p0, float p1, float p2, float p3) {
-        float u = 1 - t; // 補數
+    public static double getBFromT(double t, double p0, double p1, double p2, double p3) {
+        double u = 1 - t; // 補數
         return (u * u * u) * p0 + (3 * u * u * t) * p1 + (3 * u * t * t) * p2 + (t * t * t) * p3;
     }
 
@@ -91,7 +91,7 @@ public class CubicBezier {
      * @param p3  終點的 x 座標
      * @return    對應的 x 值
      */
-    public static float getXFromT(float t, float p0, float p1, float p2, float p3) {
+    public static double getXFromT(double t, double p0, double p1, double p2, double p3) {
         return getBFromT(t, p0, p1, p2, p3);
     }
 
@@ -105,7 +105,7 @@ public class CubicBezier {
      * @param p3  終點的 x 座標
      * @return    對應的 y 值
      */
-    public static float getYFromT(float t, float p0, float p1, float p2, float p3) {
+    public static double getYFromT(double t, double p0, double p1, double p2, double p3) {
         return getBFromT(t, p0, p1, p2, p3);
     }
 
@@ -117,8 +117,8 @@ public class CubicBezier {
      * @return     對應的 y 值
      */
     @Deprecated
-    public static float getYFromX(TransitionMode mode, float x) {
-        float t = getTFromX(x, mode.x1, mode.x2, 0.0001F); // 先求出 t
+    public static double getYFromX(TransitionMode mode, double x) {
+        double t = getTFromX(x, mode.x1, mode.x2, 0.0001F); // 先求出 t
         return getYFromT(t, 0, mode.y1, mode.y2, 1);       // 再用 t 計算 y
     }
 
@@ -132,9 +132,9 @@ public class CubicBezier {
         GENSHIN_IMPACT_2("genshin-impact-2", 0.3F, 0.8F, 0.3F, 1.0F);
 
         public final String key;
-        public final float x1, y1, x2, y2;
+        public final double x1, y1, x2, y2;
 
-        TransitionMode(String key, float x1, float y1, float x2, float y2) {
+        TransitionMode(String key, double x1, double y1, double x2, double y2) {
             this.key = key;
             this.x1 = x1;
             this.y1 = y1;
