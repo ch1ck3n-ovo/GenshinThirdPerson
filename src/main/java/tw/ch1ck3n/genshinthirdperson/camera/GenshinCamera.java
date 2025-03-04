@@ -1,11 +1,11 @@
-package tw.ch1ck3n.camera;
+package tw.ch1ck3n.genshinthirdperson.camera;
 
 import lombok.Getter;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.MathHelper;
-import tw.ch1ck3n.GenshinThirdPerson;
-import tw.ch1ck3n.config.GTPConfig;
-import tw.ch1ck3n.util.CubicBezier;
+import tw.ch1ck3n.genshinthirdperson.GenshinThirdPerson;
+import tw.ch1ck3n.genshinthirdperson.config.GTPConfig;
+import tw.ch1ck3n.genshinthirdperson.util.CubicBezier;
 
 @Getter
 public class GenshinCamera {

@@ -1,4 +1,4 @@
-package tw.ch1ck3n.mixin;
+package tw.ch1ck3n.genshinthirdperson.mixin;
 
 import net.minecraft.client.render.entity.EntityRenderer;
 import net.minecraft.client.render.entity.EntityRendererFactory;
@@ -11,9 +11,9 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
-import tw.ch1ck3n.GenshinThirdPerson;
-import tw.ch1ck3n.camera.GenshinCamera;
-import tw.ch1ck3n.util.ColorUtil;
+import tw.ch1ck3n.genshinthirdperson.GenshinThirdPerson;
+import tw.ch1ck3n.genshinthirdperson.camera.GenshinCamera;
+import tw.ch1ck3n.genshinthirdperson.util.ColorUtil;
 
 @Mixin(LivingEntityRenderer.class)
 public abstract class LivingEntityRendererMixin<T extends LivingEntity, M extends EntityModel<T>> extends EntityRenderer<T> implements FeatureRendererContext<T, M> {

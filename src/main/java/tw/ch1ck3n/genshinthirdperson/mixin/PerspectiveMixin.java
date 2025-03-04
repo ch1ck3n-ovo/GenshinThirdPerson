@@ -1,4 +1,4 @@
-package tw.ch1ck3n.mixin;
+package tw.ch1ck3n.genshinthirdperson.mixin;
 
 import net.minecraft.client.option.Perspective;
 import org.spongepowered.asm.mixin.Final;
@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import tw.ch1ck3n.GenshinThirdPerson;
+import tw.ch1ck3n.genshinthirdperson.GenshinThirdPerson;
 
 @Mixin(Perspective.class)
 public class PerspectiveMixin {

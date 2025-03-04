@@ -16,10 +16,10 @@
 	"environment": "client",
 	"entrypoints": {
 		"main": [
-			"tw.ch1ck3n.GenshinThirdPerson"
+          "tw.ch1ck3n.genshinthirdperson.GenshinThirdPerson"
 		],
 		"modmenu": [
-			"tw.ch1ck3n.config.ModMenuIntegration"
+			"tw.ch1ck3n.genshinthirdperson.config.ModMenuIntegration"
 		]
 	},
 	"mixins": [

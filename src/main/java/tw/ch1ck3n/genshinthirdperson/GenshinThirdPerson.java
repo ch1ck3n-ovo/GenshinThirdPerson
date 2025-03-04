@@ -1,12 +1,12 @@
-package tw.ch1ck3n;
+package tw.ch1ck3n.genshinthirdperson;
 
 import lombok.Getter;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 
-import tw.ch1ck3n.config.GTPConfig;
-import tw.ch1ck3n.camera.GenshinCamera;
+import tw.ch1ck3n.genshinthirdperson.config.GTPConfig;
+import tw.ch1ck3n.genshinthirdperson.camera.GenshinCamera;
 
 @Getter
 public class GenshinThirdPerson implements ModInitializer {

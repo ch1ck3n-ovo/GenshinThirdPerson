@@ -1,4 +1,4 @@
-package tw.ch1ck3n.mixin;
+package tw.ch1ck3n.genshinthirdperson.mixin;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.input.Input;
@@ -9,9 +9,9 @@ import org.spongepowered.asm.mixin.*;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import tw.ch1ck3n.GenshinThirdPerson;
-import tw.ch1ck3n.config.GTPConfig;
-import tw.ch1ck3n.camera.GenshinCamera;
+import tw.ch1ck3n.genshinthirdperson.GenshinThirdPerson;
+import tw.ch1ck3n.genshinthirdperson.config.GTPConfig;
+import tw.ch1ck3n.genshinthirdperson.camera.GenshinCamera;
 
 @Mixin(KeyboardInput.class)
 public abstract class KeyboardInputMixin extends Input {
