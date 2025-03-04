@@ -1,4 +1,4 @@
-package tw.ch1ck3n.util;
+package tw.ch1ck3n.genshinthirdperson.util;
 
 public class CubicBezier {
 
