@@ -16,6 +16,8 @@ import tw.ch1ck3n.genshinthirdperson.GenshinThirdPerson;
 @Mixin(InGameHud.class)
 public class InGameHudMixin {
 
+    // AlwaysShowCrosshair
+
     @Final
     @Shadow
     private static Identifier CROSSHAIR_TEXTURE;

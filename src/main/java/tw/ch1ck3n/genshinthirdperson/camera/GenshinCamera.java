@@ -1,6 +1,7 @@
 package tw.ch1ck3n.genshinthirdperson.camera;
 
 import lombok.Getter;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.MathHelper;
 import tw.ch1ck3n.genshinthirdperson.GenshinThirdPerson;
@@ -102,6 +103,18 @@ public class GenshinCamera {
 
     public float wrapYaw(float yaw) {
         return (yaw + 180.0F) % 360.0F - 180.0F;
+    }
+
+    public boolean canRotate() {
+        PlayerEntity player = MinecraftClient.getInstance().player;
+        if (player == null) return false;
+        GTPConfig.CameraAlignOnClick cameraAlignOnClick = instance.getConfig().cameraAlignOnClick;
+        GTPConfig.CameraBasedMovement cameraBasedMovement = instance.getConfig().cameraBasedMovement;
+        if (!cameraAlignOnClick.status) {
+            if (!((System.currentTimeMillis() - this.getLastInteractionTimeMillis()) > (cameraAlignOnClick.alignRecoveryDelay * 50L))) return false;
+        }
+        return (cameraBasedMovement.disableWhenElytra == !player.isGliding()) && (cameraBasedMovement.disableWhenRiding == !player.hasVehicle());
+
     }
 
     /** MouseMixin.class */

@@ -9,16 +9,20 @@ import tw.ch1ck3n.genshinthirdperson.util.CubicBezier;
 @Config(name = GenshinThirdPerson.MOD_ID)
 public class GTPConfig implements ConfigData {
 
-    // TODO: fix autoCharacterFade do thing whether mother mod is enabled or not
-
     @ConfigEntry.Gui.CollapsibleObject
     public AlwaysShowCrosshair alwaysShowCrosshair = new AlwaysShowCrosshair();
+
+    @ConfigEntry.Gui.CollapsibleObject
+    public AutoCharacterFade autoCharacterFade = new AutoCharacterFade();
+
+    @ConfigEntry.Gui.CollapsibleObject
+    public CameraAlignOnClick cameraAlignOnClick = new CameraAlignOnClick();
 
     @ConfigEntry.Gui.CollapsibleObject
     public CameraBasedMovement cameraBasedMovement = new CameraBasedMovement();
 
     @ConfigEntry.Gui.CollapsibleObject
-        public DisableThirdPersonFrontView disableThirdPersonFrontView = new DisableThirdPersonFrontView();
+    public DisableThirdPersonFrontView disableThirdPersonFrontView = new DisableThirdPersonFrontView();
 
     @ConfigEntry.Gui.CollapsibleObject
     public SmoothCameraClip smoothCameraClip = new SmoothCameraClip();
@@ -28,13 +32,32 @@ public class GTPConfig implements ConfigData {
         public boolean status = true;
     }
 
-    public static class CameraBasedMovement {
+    public static class AutoCharacterFade {
+
+        public boolean status = true;
+
+        @ConfigEntry.Gui.Tooltip
+        public boolean disableArmorWhenFade = true;
+
+        @ConfigEntry.Gui.Tooltip
+        public boolean disableCapeWhenFade = true;
+
+        @ConfigEntry.Gui.Tooltip
+        public boolean disableItemWhenFade = true;
+    }
+
+    public static class CameraAlignOnClick {
 
         public boolean status = true;
 
         @ConfigEntry.BoundedDiscrete(min = 0L, max = 100L)
         @ConfigEntry.Gui.Tooltip
         public long alignRecoveryDelay = 20L;
+    }
+
+    public static class CameraBasedMovement {
+
+        public boolean status = true;
 
         @ConfigEntry.Gui.Tooltip
         public boolean disableWhenElytra = true;
@@ -67,9 +90,6 @@ public class GTPConfig implements ConfigData {
         @ConfigEntry.BoundedDiscrete(min = 0L, max = 100L)
         @ConfigEntry.Gui.Tooltip
         public long rotationSpeed = 30L;
-
-        @ConfigEntry.Gui.Tooltip
-        public boolean autoCharacterFade = true;
 
         @ConfigEntry.Gui.Tooltip
         public boolean applyToMobs = true;

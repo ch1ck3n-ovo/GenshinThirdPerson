@@ -17,6 +17,8 @@ import tw.ch1ck3n.genshinthirdperson.camera.GenshinCamera;
 @Mixin(Camera.class)
 public class CameraMixin {
 
+	// CameraBasedMovement
+
 	@Shadow
 	private Entity focusedEntity;
 

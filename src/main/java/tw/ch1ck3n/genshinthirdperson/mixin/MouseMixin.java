@@ -14,6 +14,8 @@ import tw.ch1ck3n.genshinthirdperson.GenshinThirdPerson;
 @Mixin(Mouse.class)
 public class MouseMixin {
 
+	// CameraAlignOnClick
+
 	@Final
 	@Shadow
 	private MinecraftClient client;
@@ -21,7 +23,8 @@ public class MouseMixin {
 	@Inject(method = "onMouseButton", at = @At("HEAD"))
 	private void onMouseButton(long window, int button, int action, int mods, CallbackInfo ci) {
 		PlayerEntity player = this.client.player;
-		if ((this.client.currentScreen == null && this.client.getOverlay() == null) && (0 <= button && button <= 2))
+		if ((this.client.currentScreen == null && this.client.getOverlay() == null) &&
+				(0 <= button && button <= 2) && GenshinThirdPerson.instance.getConfig().cameraAlignOnClick.status)
 			GenshinThirdPerson.getInstance().getCamera().onMouseButton(player);
 	}
 }

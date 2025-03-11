@@ -13,6 +13,8 @@ import tw.ch1ck3n.genshinthirdperson.camera.GenshinCamera;
 @Mixin(Entity.class)
 public abstract class EntityMixin {
 
+	// CameraBasedMovement
+
 	@Shadow
 	private Entity vehicle;
 

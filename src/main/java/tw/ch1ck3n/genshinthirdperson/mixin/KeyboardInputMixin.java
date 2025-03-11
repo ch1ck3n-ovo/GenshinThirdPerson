@@ -3,19 +3,25 @@ package tw.ch1ck3n.genshinthirdperson.mixin;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.input.Input;
 import net.minecraft.client.input.KeyboardInput;
+import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.option.GameOptions;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.PlayerInput;
-import org.spongepowered.asm.mixin.*;
+import org.spongepowered.asm.mixin.Final;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import tw.ch1ck3n.genshinthirdperson.GenshinThirdPerson;
-import tw.ch1ck3n.genshinthirdperson.config.GTPConfig;
 import tw.ch1ck3n.genshinthirdperson.camera.GenshinCamera;
+import tw.ch1ck3n.genshinthirdperson.config.GTPConfig;
 
 @Mixin(KeyboardInput.class)
 public abstract class KeyboardInputMixin extends Input {
+
+	// CameraBasedMovement
 
 	@Final
 	@Shadow
@@ -58,12 +64,7 @@ public abstract class KeyboardInputMixin extends Input {
 
 	@Unique
 	private boolean canRotate() {
-		PlayerEntity player = MinecraftClient.getInstance().player;
-		if (player == null) return false;
-		GenshinThirdPerson instance = GenshinThirdPerson.getInstance();
-		GTPConfig.CameraBasedMovement cameraBasedMovement = instance.getConfig().cameraBasedMovement;
-		GenshinCamera camera = instance.getCamera();
-		return (System.currentTimeMillis() - camera.getLastInteractionTimeMillis()) > (cameraBasedMovement.alignRecoveryDelay * 50L) &&
-				(cameraBasedMovement.disableWhenElytra == !player.isGliding()) && (cameraBasedMovement.disableWhenRiding == !player.hasVehicle());
+		GenshinCamera camera = GenshinThirdPerson.getInstance().getCamera();
+		return camera.canRotate();
 	}
 }
