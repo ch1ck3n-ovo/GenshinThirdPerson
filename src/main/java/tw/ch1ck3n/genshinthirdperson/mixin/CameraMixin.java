@@ -25,7 +25,8 @@ public class CameraMixin {
 	@Inject(method = "update", at = @At("HEAD"))
 	private void injectUpdate(BlockView area, Entity focusedEntity, boolean thirdPerson, boolean inverseView, float tickDelta, CallbackInfo ci) {
 		GenshinCamera camera = GenshinThirdPerson.getInstance().getCamera();
-		camera.update(thirdPerson, tickDelta);
+		camera.update(inverseView, thirdPerson, tickDelta);
+//		System.out.println("inverseView: " + inverseView + ", " + "thirdPerson: " + thirdPerson);
 	}
 
 	@ModifyArg(method = "update", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/Camera;setRotation(FF)V", ordinal = 1), index = 0)

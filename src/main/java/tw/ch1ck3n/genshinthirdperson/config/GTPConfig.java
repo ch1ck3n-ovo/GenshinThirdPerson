@@ -5,26 +5,27 @@ import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
 import tw.ch1ck3n.genshinthirdperson.GenshinThirdPerson;
 import tw.ch1ck3n.genshinthirdperson.util.CubicBezier;
+import tw.ch1ck3n.genshinthirdperson.util.DisableMode;
 
 @Config(name = GenshinThirdPerson.MOD_ID)
 public class GTPConfig implements ConfigData {
 
-    @ConfigEntry.Gui.CollapsibleObject
+    @ConfigEntry.Gui.CollapsibleObject(startExpanded = true)
     public AlwaysShowCrosshair alwaysShowCrosshair = new AlwaysShowCrosshair();
 
-    @ConfigEntry.Gui.CollapsibleObject
+    @ConfigEntry.Gui.CollapsibleObject(startExpanded = true)
     public AutoCharacterFade autoCharacterFade = new AutoCharacterFade();
 
-    @ConfigEntry.Gui.CollapsibleObject
+    @ConfigEntry.Gui.CollapsibleObject(startExpanded = true)
     public CameraAlignOnClick cameraAlignOnClick = new CameraAlignOnClick();
 
-    @ConfigEntry.Gui.CollapsibleObject
+    @ConfigEntry.Gui.CollapsibleObject(startExpanded = true)
     public CameraBasedMovement cameraBasedMovement = new CameraBasedMovement();
 
-    @ConfigEntry.Gui.CollapsibleObject
-    public DisableThirdPersonFrontView disableThirdPersonFrontView = new DisableThirdPersonFrontView();
+    @ConfigEntry.Gui.CollapsibleObject(startExpanded = true)
+    public ThirdPersonFrontView thirdPersonFrontView = new ThirdPersonFrontView();
 
-    @ConfigEntry.Gui.CollapsibleObject
+    @ConfigEntry.Gui.CollapsibleObject(startExpanded = true)
     public SmoothCameraClip smoothCameraClip = new SmoothCameraClip();
 
     public static class AlwaysShowCrosshair {
@@ -66,9 +67,13 @@ public class GTPConfig implements ConfigData {
         public boolean disableWhenRiding= true;
     }
 
-    public static class DisableThirdPersonFrontView {
+    public static class ThirdPersonFrontView {
 
         public boolean status = true;
+
+        @ConfigEntry.Gui.EnumHandler(option = ConfigEntry.Gui.EnumHandler.EnumDisplayOption.BUTTON)
+        @ConfigEntry.Gui.Tooltip
+        public DisableMode disableMode = DisableMode.SKIP;
     }
 
     public static class SmoothCameraClip {

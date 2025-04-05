@@ -9,6 +9,8 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import tw.ch1ck3n.genshinthirdperson.GenshinThirdPerson;
 import tw.ch1ck3n.genshinthirdperson.camera.GenshinCamera;
+import tw.ch1ck3n.genshinthirdperson.config.GTPConfig;
+import tw.ch1ck3n.genshinthirdperson.util.DisableMode;
 
 @Mixin(Entity.class)
 public abstract class EntityMixin {
@@ -34,7 +36,7 @@ public abstract class EntityMixin {
 
 		GenshinThirdPerson instance = GenshinThirdPerson.getInstance();
 		GenshinCamera camera = instance.getCamera();
-		if (instance.getConfig().cameraBasedMovement.status && camera.isThirdPerson()) {
+		if (instance.isEnabled()) {
 			camera.setRotation(camera.getYaw() + g, camera.getPitch() + f);
 			this.setPitch(camera.getPitch());
 		} else {

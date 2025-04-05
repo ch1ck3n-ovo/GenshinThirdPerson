@@ -8,6 +8,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import tw.ch1ck3n.genshinthirdperson.GenshinThirdPerson;
+import tw.ch1ck3n.genshinthirdperson.config.GTPConfig;
+import tw.ch1ck3n.genshinthirdperson.util.DisableMode;
 
 @Mixin(Perspective.class)
 public class PerspectiveMixin {
@@ -18,7 +20,8 @@ public class PerspectiveMixin {
 
 	@Inject(method = "next", at = @At(value = "TAIL"), cancellable = true)
 	public void injectNext(CallbackInfoReturnable<Perspective> cir) {
-		if (GenshinThirdPerson.getInstance().getConfig().disableThirdPersonFrontView.status)
+		if (GenshinThirdPerson.getInstance().getConfig().thirdPersonFrontView.status &&
+				GenshinThirdPerson.getInstance().getConfig().thirdPersonFrontView.disableMode == DisableMode.SKIP)
 			cir.setReturnValue(VALUES[(((Perspective) (Object) this).ordinal() + 1) % (VALUES.length - 1)]);
 	}
 }

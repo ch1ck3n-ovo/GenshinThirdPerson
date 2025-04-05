@@ -25,8 +25,12 @@
   "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.disableWhenRiding": "Disable When Riding",
   "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.disableWhenRiding.@Tooltip": "Automatically disable Camera-Based Movement when riding.",
 
-  "text.autoconfig.genshinthirdperson.option.disableThirdPersonFrontView": "Disable Third-Person Front View",
-  "text.autoconfig.genshinthirdperson.option.disableThirdPersonFrontView.status": "Status",
+  "text.autoconfig.genshinthirdperson.option.thirdPersonFrontView": "Third-Person Front View",
+  "text.autoconfig.genshinthirdperson.option.thirdPersonFrontView.status": "Status",
+  "text.autoconfig.genshinthirdperson.option.thirdPersonFrontView.disableMode": "Disable Mode",
+  "text.autoconfig.genshinthirdperson.option.thirdPersonFrontView.disableMode.@Tooltip": "Controls how third-person front view is disabled:\n - \"Skip\": Skips the front view when cycling perspectives, switching only between first-person and back view.\n - \"Disable\": Completely blocks front view and disables the \"Camera-Based Movement\" feature.",
+  "text.autoconfig.genshinthirdperson.option.thirdPersonFrontView.disableMode.skip": "Skip",
+  "text.autoconfig.genshinthirdperson.option.thirdPersonFrontView.disableMode.disable": "Disable",
 
 
   "text.autoconfig.genshinthirdperson.option.smoothCameraClip": "Smooth Camera Clip",

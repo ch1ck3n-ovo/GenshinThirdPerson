@@ -7,6 +7,7 @@ import net.fabricmc.api.ModInitializer;
 
 import tw.ch1ck3n.genshinthirdperson.config.GTPConfig;
 import tw.ch1ck3n.genshinthirdperson.camera.GenshinCamera;
+import tw.ch1ck3n.genshinthirdperson.util.DisableMode;
 
 @Getter
 public class GenshinThirdPerson implements ModInitializer {
@@ -27,4 +28,9 @@ public class GenshinThirdPerson implements ModInitializer {
 		this.config = AutoConfig.getConfigHolder(GTPConfig.class).getConfig();
 	}
 
+	public boolean isEnabled() {
+		return (config.cameraBasedMovement.status && camera.isThirdPerson()) &&
+				!(config.thirdPersonFrontView.status &&	camera.isThirdPersonFrontView() &&
+				config.thirdPersonFrontView.disableMode == DisableMode.DISABLE);
+	}
 }

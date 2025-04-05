@@ -25,8 +25,12 @@
   "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.disableWhenRiding": "騎乘載具時禁用",
   "text.autoconfig.genshinthirdperson.option.cameraBasedMovement.disableWhenRiding.@Tooltip": "當騎乘載具時，自動禁用鏡頭導向移動。",
 
-  "text.autoconfig.genshinthirdperson.option.disableThirdPersonFrontView": "禁用第三人稱前視角",
-  "text.autoconfig.genshinthirdperson.option.disableThirdPersonFrontView.status": "狀態",
+  "text.autoconfig.genshinthirdperson.option.thirdPersonFrontView": "第三人稱前視角",
+  "text.autoconfig.genshinthirdperson.option.thirdPersonFrontView.status": "狀態",
+  "text.autoconfig.genshinthirdperson.option.thirdPersonFrontView.disableMode": "禁用模式",
+  "text.autoconfig.genshinthirdperson.option.thirdPersonFrontView.disableMode.@Tooltip": "控制是否停用第三人稱前視角的方式：\n - \"Skip\": 切換視角時會略過前視角，只在第一人稱與背後視角之間切換。\n - \"Disable\": 完全禁止使用前視角，並停用\"鏡頭導向移動\"功能。",
+  "text.autoconfig.genshinthirdperson.option.thirdPersonFrontView.disableMode.skip": "跳過",
+  "text.autoconfig.genshinthirdperson.option.thirdPersonFrontView.disableMode.disable": "禁用",
 
   "text.autoconfig.genshinthirdperson.option.smoothCameraClip": "平滑鏡頭縮放",
   "text.autoconfig.genshinthirdperson.option.smoothCameraClip.status": "狀態",

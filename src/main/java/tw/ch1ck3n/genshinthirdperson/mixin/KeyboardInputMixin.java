@@ -17,6 +17,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import tw.ch1ck3n.genshinthirdperson.GenshinThirdPerson;
 import tw.ch1ck3n.genshinthirdperson.camera.GenshinCamera;
 import tw.ch1ck3n.genshinthirdperson.config.GTPConfig;
+import tw.ch1ck3n.genshinthirdperson.util.DisableMode;
 
 @Mixin(KeyboardInput.class)
 public abstract class KeyboardInputMixin extends Input {
@@ -41,7 +42,7 @@ public abstract class KeyboardInputMixin extends Input {
 		GenshinThirdPerson instance = GenshinThirdPerson.getInstance();
 		GenshinCamera camera = instance.getCamera();
 		GTPConfig config = instance.getConfig();
-		if (config.cameraBasedMovement.status && camera.isThirdPerson()) {
+		if (instance.isEnabled()) {
 			PlayerEntity player = MinecraftClient.getInstance().player;
 			if (player != null && this.isPressedOnAny() && this.canRotate()) {
 				float prevYaw= player.getYaw();

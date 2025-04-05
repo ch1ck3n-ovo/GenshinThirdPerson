@@ -19,6 +19,7 @@ public class GenshinCamera {
 
     private float pitch;
     private float yaw;
+    private boolean inverseView;
     private boolean thirdPerson;
     private long elapsedTimeMillis;
     private long lastCameraUpdateTimeMillis;
@@ -28,7 +29,8 @@ public class GenshinCamera {
     private float tickDelta;
 
     /** CameraMixin.class */
-    public void update(boolean thirdPerson, float tickDelta) {
+    public void update(boolean inverseView, boolean thirdPerson, float tickDelta) {
+        this.inverseView = inverseView;
         this.thirdPerson = thirdPerson;
         this.tickDelta = tickDelta;
         if (instance.getConfig().smoothCameraClip.status) {
@@ -64,6 +66,10 @@ public class GenshinCamera {
         // 確保鏡頭距離不大於f
         currentCameraDistance = Math.min(f, initialDistance + (4 - initialDistance) * y2);
         return currentCameraDistance;
+    }
+
+    public boolean isThirdPersonFrontView() {
+        return thirdPerson && inverseView;
     }
 
     /** EntityMixin.class */
@@ -110,8 +116,8 @@ public class GenshinCamera {
         if (player == null) return false;
         GTPConfig.CameraAlignOnClick cameraAlignOnClick = instance.getConfig().cameraAlignOnClick;
         GTPConfig.CameraBasedMovement cameraBasedMovement = instance.getConfig().cameraBasedMovement;
-        if (!cameraAlignOnClick.status) {
-            if (!((System.currentTimeMillis() - this.getLastInteractionTimeMillis()) > (cameraAlignOnClick.alignRecoveryDelay * 50L))) return false;
+        if (cameraAlignOnClick.status && System.currentTimeMillis() - this.getLastInteractionTimeMillis() <= cameraAlignOnClick.alignRecoveryDelay * 50L) {
+            return false;
         }
         return (cameraBasedMovement.disableWhenElytra == !player.isGliding()) && (cameraBasedMovement.disableWhenRiding == !player.hasVehicle());
 
