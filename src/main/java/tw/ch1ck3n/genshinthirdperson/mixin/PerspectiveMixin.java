@@ -8,7 +8,6 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import tw.ch1ck3n.genshinthirdperson.GenshinThirdPerson;
-import tw.ch1ck3n.genshinthirdperson.config.GTPConfig;
 import tw.ch1ck3n.genshinthirdperson.util.DisableMode;
 
 @Mixin(Perspective.class)

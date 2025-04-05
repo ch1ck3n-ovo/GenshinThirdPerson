@@ -3,7 +3,6 @@ package tw.ch1ck3n.genshinthirdperson.mixin;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.input.Input;
 import net.minecraft.client.input.KeyboardInput;
-import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.option.GameOptions;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.PlayerInput;
@@ -17,7 +16,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import tw.ch1ck3n.genshinthirdperson.GenshinThirdPerson;
 import tw.ch1ck3n.genshinthirdperson.camera.GenshinCamera;
 import tw.ch1ck3n.genshinthirdperson.config.GTPConfig;
-import tw.ch1ck3n.genshinthirdperson.util.DisableMode;
 
 @Mixin(KeyboardInput.class)
 public abstract class KeyboardInputMixin extends Input {
