@@ -69,6 +69,7 @@ This mod provides various settings via **Mod Menu**.
 # 🌐 Language
 - **Traditional Chinese**
 - **English**
+- **French**
 
 # 💖 Credits
 Developed by **ch1ck3n-ovo**.
