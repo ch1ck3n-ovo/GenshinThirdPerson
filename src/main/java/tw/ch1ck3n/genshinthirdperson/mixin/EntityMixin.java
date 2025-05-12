@@ -19,10 +19,10 @@ public abstract class EntityMixin {
 	private Entity vehicle;
 
 	@Shadow
-	public float prevYaw;
+	public float lastYaw;
 
 	@Shadow
-	public float prevPitch;
+	public float lastPitch;
 
 	@Shadow
 	protected abstract void setRotation(float yaw, float pitch);
@@ -43,9 +43,9 @@ public abstract class EntityMixin {
 		}
 
 		this.setPitch(MathHelper.clamp(this.getPitch(), -90.0F, 90.0F));
-		this.prevPitch += f;
-		this.prevYaw += g;
-		this.prevPitch = MathHelper.clamp(this.prevPitch, -90.0F, 90.0F);
+		this.lastPitch += f;
+		this.lastYaw += g;
+		this.lastPitch = MathHelper.clamp(this.lastPitch, -90.0F, 90.0F);
 		if (this.vehicle != null) {
 			this.vehicle.onPassengerLookAround((Entity) (Object) this);
 		}

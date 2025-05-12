@@ -50,10 +50,10 @@ public abstract class KeyboardInputMixin extends Input {
 
 				this.playerInput = new PlayerInput(this.isPressedOnAny(), false, false, false,
 						this.settings.jumpKey.isPressed(), this.settings.sneakKey.isPressed(), this.settings.sprintKey.isPressed());
-				Vec2f t = this.field_55868.add(0);
+				Vec2f t = this.movementVector.add(0);
 				float y = getMovementMultiplier(this.playerInput.forward(), this.playerInput.backward()) - t.y;
 				float x = getMovementMultiplier(this.playerInput.left(), this.playerInput.right()) - t.y;
-				this.field_55868.add(new Vec2f(x, y));
+				this.movementVector.add(new Vec2f(x, y));
 			}
 		}
 	}
