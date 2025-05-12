@@ -71,7 +71,6 @@ loom {
 	mixin {
 		defaultRefmapName = "genshinthirdperson.refmap.json"
 	}
-	accessWidenerPath = file("src/main/resources/GenshinThirdPerson.accesswidener")
 }
 
 jar {
