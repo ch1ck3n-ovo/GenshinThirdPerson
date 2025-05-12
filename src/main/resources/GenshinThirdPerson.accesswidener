@@ -1,0 +1,4 @@
+accessWidener v1 named
+
+mutable field net/minecraft/util/math/Vec2f x F
+mutable field net/minecraft/util/math/Vec2f y F

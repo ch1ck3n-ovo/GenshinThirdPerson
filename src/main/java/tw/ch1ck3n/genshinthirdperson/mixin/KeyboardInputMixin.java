@@ -49,8 +49,8 @@ public abstract class KeyboardInputMixin extends Input {
 
 				this.playerInput = new PlayerInput(this.isPressedOnAny(), false, false, false,
 						this.settings.jumpKey.isPressed(), this.settings.sneakKey.isPressed(), this.settings.sprintKey.isPressed());
-				this.movementForward = getMovementMultiplier(this.playerInput.forward(), this.playerInput.backward());
-				this.movementSideways = getMovementMultiplier(this.playerInput.left(), this.playerInput.right());
+				this.field_55868.y = getMovementMultiplier(this.playerInput.forward(), this.playerInput.backward());
+				this.field_55868.x = getMovementMultiplier(this.playerInput.left(), this.playerInput.right());
 			}
 		}
 	}
