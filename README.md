@@ -4,13 +4,13 @@ A **Minecraft Fabric mod** that enhances third-person movement by introducing **
 
 # 🎥 Demonstration
 ### Camera-Based Movement
-![Camera-Based Movement](https://github.com/ch1ck3n-ovo/GenshinThirdPerson/blob/base/assets/CameraBasedMovement.gif?raw=true)
+![Camera-Based Movement](assets/CameraBasedMovement.gif?raw=true)
 
 ### Smooth Camera Clip
-![Smooth Camera Clip](https://github.com/ch1ck3n-ovo/GenshinThirdPerson/blob/base/assets/SmoothCameraClip.gif?raw=true)
+![Smooth Camera Clip](assets/SmoothCameraClip.gif?raw=true)
 
 ### Character Auto-Fade
-![Character Auto-Fade](https://github.com/ch1ck3n-ovo/GenshinThirdPerson/blob/base/assets/AutoCharacterFade.gif?raw=true)
+![Character Auto-Fade](assets/AutoCharacterFade.gif?raw=true)
 
 # 🌟 Features
 - **Always Show Crosshair**: Keeps the crosshair visible even when in third-person view.
