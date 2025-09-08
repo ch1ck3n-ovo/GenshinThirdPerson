@@ -1,0 +1,26 @@
+package tw.ch1ck3n.genshinthirdperson.mixin;
+
+import net.minecraft.client.option.Perspective;
+import org.spongepowered.asm.mixin.Final;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+import tw.ch1ck3n.genshinthirdperson.GenshinThirdPerson;
+import tw.ch1ck3n.genshinthirdperson.util.DisableMode;
+
+@Mixin(Perspective.class)
+public class PerspectiveMixin {
+
+	@Final
+	@Shadow
+	private static Perspective[] VALUES;
+
+	@Inject(method = "next", at = @At(value = "TAIL"), cancellable = true)
+	public void injectNext(CallbackInfoReturnable<Perspective> cir) {
+		if (GenshinThirdPerson.getInstance().getConfig().noThirdPersonFrontView.status &&
+				GenshinThirdPerson.getInstance().getConfig().noThirdPersonFrontView.disableMode == DisableMode.SKIP)
+			cir.setReturnValue(VALUES[(((Perspective) (Object) this).ordinal() + 1) % (VALUES.length - 1)]);
+	}
+}
